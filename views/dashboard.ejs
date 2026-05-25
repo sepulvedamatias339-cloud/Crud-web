@@ -1,0 +1,29 @@
+<a href="/agregar">Agregar usuario</a>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Acciones</th>
+</tr>
+
+<% usuarios.forEach(usuario => { %>
+
+<tr>
+
+<td><%= usuario.id %></td>
+<td><%= usuario.nombre %></td>
+<td><%= usuario.correo %></td>
+
+<td>
+    <a href="/editar/<%= usuario.id %>">Editar</a>
+    <a href="/eliminar/<%= usuario.id %>">Eliminar</a>
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
